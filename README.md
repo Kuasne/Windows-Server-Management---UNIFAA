@@ -27,10 +27,6 @@ Este repositório contém a documentação detalhada de dois desafios práticos 
 - Configuração de servidor DHCP
 - Configuração de servidor DNS com CNAME
 
-## 🌐 Visualizar Online
-
-Acesse a documentação completa em: `https://seu-usuario.github.io/windows-server-desafios/`
-
 ## 🎨 Recursos
 
 - ✨ Design moderno com tema "Cosmic/Underwater"
