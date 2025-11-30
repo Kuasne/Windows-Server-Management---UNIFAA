@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Desafio 2</h1>
+            <div class="info-grid">
+                <div class="info-item">
+                    <span class="label">Nome</span>
+                    <span class="value">Lorenzo Gabriel Almeida Silva</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">Disciplina</span>
+                    <span class="value">Windows Server Management</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">Professor</span>
+                    <span class="value">Anderson Luiz Nogueira Vieira</span>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="card">
+                <h2>Escopo do Desafio</h2>
+                <p>Tendo como base o servidor criado anteriormente, realizar as seguintes configurações:</p>
+
+                <h3>1. Recursos Avançados de Servidor de Arquivos (FSRM)</h3>
+                <ul>
+                    <li><strong>Objetivo:</strong> Bloquear a gravação de arquivos <strong>MP3</strong> e
+                        <strong>MP4</strong>
+                        na estrutura de pastas criada.
+                    </li>
+                    <li><strong>Ação:</strong> Configurar a Triagem de Arquivos (File Screening) para impedir esses
+                        tipos de
+                        arquivo.</li>
+                </ul>
+
+                <h3>2. Servidor DHCP</h3>
+                <ul>
+                    <li><strong>Objetivo:</strong> Criar um escopo de distribuição de IPs.</li>
+                    <li><strong>Configuração:</strong>
+                        <ul>
+                            <li><strong>Pool de Endereços:</strong> 192.168.0.50 até 192.168.0.80.</li>
+                            <li><strong>Domínio:</strong> lorenzo.intra.</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <h3>3. Servidor DNS</h3>
+                <ul>
+                    <li><strong>Objetivo:</strong> Criar um alias (CNAME).</li>
+                    <li><strong>Configuração:</strong>
+                        <ul>
+                            <li><strong>Alias:</strong> <code>www.lorenzo.intra</code></li>
+                            <li><strong>Destino:</strong> 192.168.0.2</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2>Documentação da Implementação</h2>
+
+                <h3>Parte 1: Bloqueio de Arquivos (File Screening)</h3>
+                <div class="gallery">
+                    <figure>
+                        <img src="File Screen Template Block's.png" alt="File Screen Template Block's"
+                            class="lightbox-trigger">
+                        <figcaption>File Screen Template Block's</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="File Screen Template Block's Audio and video files.png"
+                            alt="File Screen Template Block's Audio and video files" class="lightbox-trigger">
+                        <figcaption>File Screen Template Block's Audio and video files</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="Source template Block Audio and Video Files.png"
+                            alt="Source template Block Audio and Video Files" class="lightbox-trigger">
+                        <figcaption>Source template Block Audio and Video Files</figcaption>
+                    </figure>
+                </div>
+
+                <h3>Parte 2: Configuração do DHCP</h3>
+                <div class="gallery">
+                    <figure>
+                        <img src="ADD DHCP SERVER.png" alt="ADD DHCP SERVER" class="lightbox-trigger">
+                        <figcaption>ADD DHCP SERVER</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="DHCP - SCOPE 1.png" alt="DHCP - SCOPE 1" class="lightbox-trigger">
+                        <figcaption>DHCP - SCOPE 1</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="DHCP - RESERVATION.png" alt="DHCP - RESERVATION" class="lightbox-trigger">
+                        <figcaption>DHCP - RESERVATION</figcaption>
+                    </figure>
+                </div>
+
+
+                <h3>Parte 3: Configuração do DNS</h3>
+                <div class="gallery">
+                    <figure>
+                        <img src="DNS - ALIAS.png" alt="DNS - ALIAS" class="lightbox-trigger">
+                        <figcaption>DNS - ALIAS</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="DNS - Reverse Lookup Zone.png" alt="DNS - Reverse Lookup Zone"
+                            class="lightbox-trigger">
+                        <figcaption>DNS - Reverse Lookup Zone</figcaption>
+                    </figure>
+                </div>
+
+                <div class="btn-container">
+                    <a href="../Desafio%201/index.html" class="btn">← Voltar para Desafio 1</a>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <div id="lightbox" class="lightbox">
+        <span class="close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+        <div id="caption"></div>
+    </div>
+
+    <script src="background-animation.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

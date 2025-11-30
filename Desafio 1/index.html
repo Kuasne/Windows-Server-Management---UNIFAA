@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 1 - Windows Server Management</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Desafio 1</h1>
+            <div class="info-grid">
+                <div class="info-item">
+                    <span class="label">Nome:</span>
+                    <span class="value">Lorenzo Gabriel Almeida Silva</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">Disciplina:</span>
+                    <span class="value">Windows Server Management</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">Professor:</span>
+                    <span class="value">Anderson Luiz Nogueira Vieira</span>
+                </div>
+            </div>
+        </header>
+
+        <style>
+            .btn {
+                display: inline-block;
+                padding: 10px 20px;
+                background: var(--accent-blue);
+                color: #fff;
+                text-decoration: none;
+                border-radius: 50px;
+                font-weight: 600;
+                transition: var(--transition);
+                border: 1px solid transparent;
+            }
+
+            .btn:hover {
+                background: transparent;
+                border-color: var(--accent-cyan);
+                color: var(--accent-cyan);
+                box-shadow: 0 0 15px var(--glow-color);
+            }
+        </style>
+
+        <main>
+            <section class="card">
+                <h2>Parte 1: Configuração Inicial</h2>
+                <ul>
+                    <li><strong>Domínio:</strong> lorenzo.intra</li>
+                    <li><strong>Servidor:</strong> server01</li>
+                    <li><strong>IP:</strong> 192.168.0.1</li>
+                </ul>
+                <div class="gallery">
+                    <figure>
+                        <img src="Nome Dominio.png" alt="Configuração do Nome do Domínio" class="lightbox-trigger">
+                        <figcaption>Nome do Domínio</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="Server01.png" alt="Configuração do Server01" class="lightbox-trigger">
+                        <figcaption>Server01</figcaption>
+                    </figure>
+                </div>
+            </section>
+
+            <section class="card">
+                <h2>Parte 2: Active Directory</h2>
+                <div class="steps">
+                    <p><strong>1. Unidades Organizacionais:</strong> TI e Financeiro.</p>
+                    <p><strong>2. Usuários:</strong></p>
+                    <ul>
+                        <li>TI: 2 usuários (incluindo Lorenzo Almeida)</li>
+                        <li>Financeiro: 3 usuários</li>
+                    </ul>
+                    <p><strong>3. Computadores:</strong> COMP01 e COMP02 (na OU Financeiro)</p>
+                </div>
+
+                <h3>Estrutura de Pastas e Usuários</h3>
+                <div class="gallery">
+                    <figure>
+                        <img src="Active Directory Domain Services (installed).png"
+                            alt="Active Directory Domain Services" class="lightbox-trigger">
+                        <figcaption>AD DS Instalado</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="Financeiro - USERS.png" alt="Usuários do Financeiro" class="lightbox-trigger">
+                        <figcaption>Usuários Financeiro</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="Ti - USERS.png" alt="Usuários de TI" class="lightbox-trigger">
+                        <figcaption>Usuários TI</figcaption>
+                    </figure>
+                </div>
+            </section>
+
+            <section class="card">
+                <h2>Parte 3: Restrições de Acesso</h2>
+                <p><strong>Restrição de Horário:</strong> Usuário "Lais Brum" (Financeiro) restrita ao horário
+                    comercial.</p>
+                <div class="gallery">
+                    <figure>
+                        <img src="Logon Hours - acesso limitado de horarios.png" alt="Logon Hours"
+                            class="lightbox-trigger">
+                        <figcaption>Horário de Logon</figcaption>
+                    </figure>
+                </div>
+
+                <p><strong>Restrição de Estação de Trabalho:</strong> Vitor com acesso apenas a COMP01 e COMP02.</p>
+                <div class="gallery">
+                    <figure>
+                        <img src="Logon Workstations - COMP01 e COMP02.png" alt="Logon Workstations"
+                            class="lightbox-trigger">
+                        <figcaption>Estações de Trabalho Permitidas</figcaption>
+                    </figure>
+                </div>
+            </section>
+
+            <section class="card">
+                <h2>Parte 4: Compartilhamento</h2>
+                <p>Criação e compartilhamento da pasta <strong>Corporativo</strong> no drive C:.</p>
+                <div class="gallery">
+                    <figure>
+                        <img src="Compartilhamento de arquivos.png" alt="Compartilhamento" class="lightbox-trigger">
+                        <figcaption>Configuração de Compartilhamento</figcaption>
+                    </figure>
+                </div>
+            </section>
+
+            <section class="card">
+                <h2>Parte 5: Estrutura de Arquivos</h2>
+                <p>Estrutura dentro da pasta Corporativo:</p>
+                <ul class="folder-structure">
+                    <li>Corporativo
+                        <ul>
+                            <li>TI</li>
+                            <li>Financeiro</li>
+                            <li>Geral</li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="gallery">
+                    <figure>
+                        <img src="Compartilhamento de arquivos.png" alt="Estrutura de Arquivos"
+                            class="lightbox-trigger">
+                        <figcaption>Estrutura de Pastas</figcaption>
+                    </figure>
+                </div>
+            </section>
+
+            <section class="card">
+                <h2>Parte 6: Grupos de Segurança</h2>
+                <p>Criação dos grupos <strong>Financeiro</strong> e <strong>TI</strong> com seus respectivos membros.
+                </p>
+                <div class="gallery">
+                    <figure>
+                        <img src="Group - Global - Members.png" alt="Grupos Globais" class="lightbox-trigger">
+                        <figcaption>Grupos de Segurança</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="Financeiro - USERS.png" alt="Membros Financeiro" class="lightbox-trigger">
+                        <figcaption>Membros do Grupo Financeiro</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="Ti - USERS.png" alt="Membros TI" class="lightbox-trigger">
+                        <figcaption>Membros do Grupo TI</figcaption>
+                    </figure>
+                </div>
+            </section>
+
+            <section class="card">
+                <h2>Parte 7: Permissões NTFS</h2>
+                <p>Configuração de permissões de acesso para as pastas.</p>
+                <div class="permissions-list">
+                    <div class="permission-item">
+                        <h3>Financeiro</h3>
+                        <p>Apenas o grupo Financeiro tem acesso.</p>
+                        <img src="Permissions for Financeiro - Group Financeiro - Treinamentos.png"
+                            alt="Permissões Financeiro" class="lightbox-trigger">
+                    </div>
+                    <div class="permission-item">
+                        <h3>TI</h3>
+                        <p>Apenas o grupo TI tem acesso.</p>
+                        <img src="Advanced Security Settings for RH Permissions.png" alt="Permissões TI"
+                            class="lightbox-trigger">
+                    </div>
+                    <div class="permission-item">
+                        <h3>Geral</h3>
+                        <p>Todos os usuários têm acesso.</p>
+                        <img src="Permissions for Arquivos - Group or Users.png" alt="Permissões Geral"
+                            class="lightbox-trigger">
+                    </div>
+                </div>
+            </section>
+            <nav style="margin-top: 40px; text-align: center; padding-bottom: 20px;">
+                <a href="../Desafio%202/desafio2.html" class="btn">Ir para Desafio 2 &rarr;</a>
+            </nav>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Lorenzo Gabriel Almeida Silva - Windows Server Management</p>
+        </footer>
+    </div>
+
+    <div id="lightbox" class="lightbox">
+        <span class="close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+        <div id="caption"></div>
+    </div>
+
+    <script src="background-animation.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
